@@ -28,19 +28,15 @@ public class Room {
         return temperature;
     }
 
-
     public double getSize() {
         return size;
     }
-
 
     public boolean isHasAirConditioner() {
         return hasAirConditioner;
     }
 
-
     public double getMinTemperature() {
         return minTemperature;
     }
-
 }
