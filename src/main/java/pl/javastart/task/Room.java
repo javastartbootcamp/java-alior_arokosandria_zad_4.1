@@ -14,12 +14,16 @@ public class Room {
     }
 
     public boolean lowerTemperature() {
-        if (hasAirConditioner == true && temperature - minTemperature > 1) {
-            temperature = temperature - 1;
-            return true;
-        } else if (hasAirConditioner == true && temperature - minTemperature < 1 && temperature - minTemperature > 0) {
-            temperature = minTemperature;
-            return true;
+        if (hasAirConditioner) {
+            if (temperature - minTemperature > 1) {
+                temperature = temperature - 1;
+                return true;
+            } else if (temperature == minTemperature) {
+                return false;
+            } else {
+                temperature = minTemperature;
+                return true;
+            }
         }
         return false;
     }
